@@ -32,7 +32,8 @@ public class ControlAcheterProduit {
 	
 	public int acheterProduit(String nomVendeur, int quantite) {
 		Etal etal = controlTrouverEtalVendeur.trouverEtalVendeur(nomVendeur);
-		return etal.acheterProduit(quantite);
+		int nbProd = etal.acheterProduit(quantite);
+		return nbProd;
 	}
 	
 	
