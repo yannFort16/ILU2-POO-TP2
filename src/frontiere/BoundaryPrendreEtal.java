@@ -41,7 +41,7 @@ public class BoundaryPrendreEtal {
 		int numEtal = controlPrendreEtal.prendreEtal(nomVendeur, produit, quantite);
 		if (numEtal != -1) {
 			System.out.println("le vendeur " + nomVendeur +
-					" s'est installé à l'étal n°"+ 5numEtal+1));
+					" s'est installé à l'étal n°"+ (numEtal+1));
 		}		
 	}
 }
