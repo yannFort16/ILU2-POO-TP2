@@ -43,8 +43,17 @@ class ControlLibererEtalTest {
 				ControlLibererEtal(controlTrouverEtalVendeur);
 		String[] expected = {"true", vendeur.getNom(), "fleurs", "10", "0"} ;
 		String[] result = controlLibererEtal.libererEtal(vendeur.getNom()); 
-		System.out.println(result);
-		assertEquals(expected, result);
+		/*System.out.println(result[0] +"\n" +
+				result[1] +"\n" +
+				result[2] +"\n" +
+				result[3] +"\n" +
+				result[4] +"\n");
+		System.out.println(expected.equals(result));*/
+		for (int i=0; i<result.length;i++) {
+			assertTrue(expected[i].equals(result[i]));
+		}
+		//assertTrue(expected.equals(result));
+		//assertEquals(expected, result);
 	}
 	
 	@Test
@@ -53,6 +62,8 @@ class ControlLibererEtalTest {
 				ControlTrouverEtalVendeur(village);
 		ControlLibererEtal controlLibererEtal = new 
 				ControlLibererEtal(contoControlTrouverEtalVendeur);
+		village.partirVendeur(vendeur);
+		assertEquals("false", controlLibererEtal.libererEtal(vendeur.getNom())[0]);
 		assertNull(controlLibererEtal.libererEtal(abraracourcix.getNom()));
 	}
 }
