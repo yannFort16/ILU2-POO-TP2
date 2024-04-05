@@ -33,6 +33,19 @@ class ControlPrendreEtalTest {
 	}
 	
 	@Test
+	void testResteEtalFalse() {
+		ControlVerifierIdentite controlVerifierIdentite = new ControlVerifierIdentite(village);
+		ControlPrendreEtal controlPrendreEtal = new ControlPrendreEtal(
+				controlVerifierIdentite, village);
+		village.installerVendeur(vendeur, "truc1", 2);
+		village.installerVendeur(vendeur, "truc2", 2);
+		village.installerVendeur(vendeur, "truc3", 2);
+		village.installerVendeur(vendeur, "truc4", 2);
+		village.installerVendeur(vendeur, "truc5", 2);
+		assertFalse(controlPrendreEtal.resteEtals());
+	}
+	
+	@Test
 	void testPrendreEtal() {
 		ControlVerifierIdentite controlVerifierIdentite = new ControlVerifierIdentite(village);
 		ControlPrendreEtal controlPrendreEtal = new ControlPrendreEtal(
