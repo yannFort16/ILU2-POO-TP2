@@ -7,17 +7,17 @@ import org.junit.jupiter.api.Test;
 
 class PersonnageTest {
 
-	/*@Test
+	@Test
 	void testPersonnage() {
 		//Personnage sisyphus = new Personnage("Sisyphus", -6);
 		Personnage sisyphus = null;
 		try {
 			sisyphus = new Personnage("Sisyphus", -6);
-		}catch (Exception e) {
+		}catch (AssertionError a) {
 			System.out.println("Force<0 inderdite");
 		}
 		assertNull(sisyphus);
-	}*/
+	}
 	
 	@Test
 	void testGetForce() {

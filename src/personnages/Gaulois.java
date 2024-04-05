@@ -12,6 +12,10 @@ public class Gaulois extends Personnage {
 		return "Le gaulois " + super.prendreParole();
 	}
 
+	public int getEffectPotion() {
+		return effetPotion;
+	}
+	
 	@Override
 	public String toString() {
 		String etatPersonnage = super.toString();
